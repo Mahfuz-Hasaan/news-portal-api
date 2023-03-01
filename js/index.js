@@ -27,7 +27,7 @@ const showNewsDetails = async (category_id, category_name) => {
 const showNews = (newsDatas, category_name) => {
   document.getElementById('alert-msg').innerText = `${newsDatas.length} items to show for ${category_name}`;
   newsDatas.forEach((newsData) => {
-    console.log(newsData);
+    console.log(newsData.title);
   });
 };
 

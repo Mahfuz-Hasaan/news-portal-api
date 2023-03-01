@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Portal</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/b21d35d86c.js" crossorigin="anonymous"></script>
 
 </head>
@@ -63,22 +63,22 @@
     </header>
 
     <main>
-        <section class="newsDetails">
-            <div class="news-details-container" id="news-details-container">
-                <div class="img"><img src="images/portal.jpg" alt=""></div>
+        <section class="newsDetails p-10 rounded-lg drop-shadow-lg  bg-teal-50">
+            <div class="news-details-container flex items-center justify-between " id="news-details-container">
+                <div class="img"><img class="rounded-lg" src="images/portal.jpg" alt=""></div>
                 <div class="news-details">
                     <div class="news-title text-2xl font-bold pb-4">The best</div>
                     <div class="news-paragraph-1 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, autem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolorum.</div>
-                    <div class="new-paragraph-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate animi officiis nam dolores tempora veritatis.</div>
-                    <div class="footer-part-of-news-details">
-                        <div class="writer">
+                    <div class="new-paragraph-2 pb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate animi officiis nam dolores tempora veritatis.</div>
+                    <div class="footer-part-of-news-details flex justify-between items-center">
+                        <div class="flex gap-x-4 items-center">
                             <div class="writer-img"><img src="images/Avatar.png" alt=""></div>
                             <div class="name-date">
                                 <p>Jane Cooper</p>
                                 <p>jan 10,2022</p>
                             </div>
                         </div>
-                        <div class="viwer">
+                        <div class="viwer flex gap-x-3">
                             <div class="view"><i class="fa-solid fa-eye"></i></div>
                             <div class="viewer">1.5M</div>
                         </div>
