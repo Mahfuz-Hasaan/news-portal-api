@@ -2,104 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Portal</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/b21d35d86c.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/b21d35d86c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
-<body class="w-11/12  mx-auto"  onload="loadNewsCatagiories()">
-    <header class="my-5">
-        <!-- navbar section -->
+<body class="w-11/12  mx-auto" onload="loadNewsCatagiories()">
+  <header class="my-5">
+    <!-- navbar section -->
     <section class="nav-bar" id="nav-bar">
-        <div class="navbar bg-base-100  border-b-4 border-indigo-500 ">
-            <div class="flex-1">
-              <a class="btn btn-primary normal-case text-xl">News Portal</a>
-            </div>
-            <div class="flex-none gap-2">
-              <div class="form-control">
-                <input type="text" placeholder="Search" class="input input-bordered" />
-              </div>
-              <button class="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-              </button>
-              <div class="dropdown dropdown-end">
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-                  <div class="w-10 rounded-full">
-                    <img src="images/portal.jpg" />
-                  </div>
-                </label>
-                <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
-                  <li>
-                    <a class="justify-between">
-                      Profile
-                      <span class="badge">New</span>
-                    </a>
-                  </li>
-                  <li><a>Settings</a></li>
-                  <li><a>Logout</a></li>
-                </ul>
-              </div>
-            </div>
+      <div class="navbar bg-base-100  border-b-4 border-indigo-500 ">
+        <div class="flex-1">
+          <a class="btn btn-primary normal-case text-xl">News Portal</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input type="text" placeholder="Search" class="input input-bordered" />
           </div>
+          <button class="btn btn-ghost btn-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="images/portal.jpg" />
+              </div>
+            </label>
+            <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- news-topic section -->
     <section class="news-topic-container py-5 flex justify-around" id="news-topic-container">
-        
-    </section>
-    
-    <section class="alert-news"id="alert-news-container">
-        <div class="alert bg-green-100 shadow-lg">
-            <div>
-              <p id="alert-msg"><span class="font-bold" id="news-items">No</span> items to show <span id="news-topic-name"> </span></p>
-            </div>
-          </div>
-    </section>
-    </header>
 
-    <main>
-        <section class="newsDetails p-10 rounded-lg drop-shadow-lg  bg-teal-50">
-            <div class="news-details-container flex items-center justify-between " id="news-details-container">
-                <div class="img"><img class="rounded-lg" src="images/portal.jpg" alt=""></div>
-                <div class="news-details">
-                    <div class="news-title text-2xl font-bold pb-4">The best</div>
-                    <div class="news-paragraph-1 pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, autem. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, dolorum.</div>
-                    <div class="new-paragraph-2 pb-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate animi officiis nam dolores tempora veritatis.</div>
-                    <div class="footer-part-of-news-details flex justify-between items-center">
-                        <div class="flex gap-x-4 items-center">
-                            <div class="writer-img"><img src="images/Avatar.png" alt=""></div>
-                            <div class="name-date">
-                                <p>Jane Cooper</p>
-                                <p>jan 10,2022</p>
-                            </div>
-                        </div>
-                        <div class="viwer flex gap-x-3">
-                            <div class="view"><i class="fa-solid fa-eye"></i></div>
-                            <div class="viewer">1.5M</div>
-                        </div>
-                        <div class="stars">
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <div class="modal-btn">
-                           <button class="modal-arrow-btn border-2 py-2 px-3 rounded-full border-purple-900  hover:bg-purple-300 hover:text-white"><i class="fa-solid fa-arrow-right text-purple-900"></i></button>
-                        </div>
+    </section>
+
+    <section class="alert-news" id="alert-news-container">
+      <div class="alert bg-green-100 shadow-lg">
+        <div>
+          <p id="alert-msg"><span class="font-bold" id="news-items">No</span> items to show <span id="news-topic-name">
+            </span></p>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="card-container " id="card-container">
+      <!-- <div class="card card-side bg-lime-50 shadow-xl">
+            <figure class="rounded-md"><img src="images/portal.jpg" class="p-5 card-img" alt="Movie"/></figure>
+            <div class="card-body">
+              <h2 class="card-title text-2xl font-bold pb-2">The best fashion influencers to follow for sartorial inspiration</h2>
+              <p>Click the button to watch on Jetflix app.</p>
+
+              <div class="footer-part-of-news-details flex justify-between items-center">
+                <div class="flex gap-x-4 items-center">
+                    <div class="writer-img"><img class="" src="images/portal.jpg" alt=""></div>
+                    <div class="name-date">
+                        <p>Jane Cooper</p>
+                        <p>jan 10,2022</p>
                     </div>
                 </div>
+                <div class="viwer flex gap-x-3">
+                    <div class="view"><i class="fa-solid fa-eye"></i></div>
+                    <div class="viewer">1.5M</div>
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="card-actions justify-end">
+                  <button type="button" class="text-purple-700 border border-purple-700 hover:bg-purple-700 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:focus:ring-blue-800">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Icon description</span>
+                  </button>
+                </div>
             </div>
-        </section>
-    </main>
+              
+              
+            </div>
+          </div> -->
+    </section>
+
+    <section class="mdal-btn" >
+      <input type="checkbox" id="my-modal-5" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box w-11/12 max-w-5xl" id="modal-body">
+            
+            </div>
+          </div>
+        </div>
+    </section>
+    
+  </main>
 
 
-    <script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
